@@ -1,24 +1,6 @@
 {
   "fields": [
     {
-      "name": "id",
-      "label": "Data Model Name",
-      "dataType": "string",
-      "fieldType": "TextField",
-      "validation": {
-        "required": "Data model name is required"
-      }
-    },
-    {
-      "name": "dataSource",
-      "label": "Data Source",
-      "dataType": "string",
-      "fieldType": "TextField",
-      "validation": {
-        "required": "Data source is required"
-      }
-    },
-    {
       "name": "tableConfig",
       "label": "Table Config",
       "dataType": "string",
@@ -31,7 +13,73 @@
       "name": "schemaList",
       "label": "Schema List",
       "dataType": "array",
-      "fieldType": "SchemaItems"
-    }
+      "fieldType": "Lable",
+      "multiple":true
+    },
+    [
+      {
+        "name": "schemaList.format",
+        "label": "Format",
+        "dataType": "string",
+        "fieldType": "Autocomplete",
+        "validation": {
+          "required": "required"
+        }
+      },
+      {
+        "name": "schemaList.2ndLevel",
+        "label": "2nd Level Nesting",
+        "dataType": "array",
+        "fieldType": "Lable",
+        "multiple":true
+      },
+      [
+        {
+          "name": "schemaList.2ndLevel.name",
+          "label": "Name",
+          "dataType": "string",
+          "fieldType": "TextField",
+          "validation": {
+            "required": "required"
+          }
+        },
+        {
+          "name": "schemaList.2ndLevel.type",
+          "label": "Type",
+          "dataType": "string",
+          "fieldType": "TextField",
+          "validation": {
+            "required": "required"
+          }
+        },
+        {
+          "name": "schemaList.2ndLevel.3rdLevel",
+          "label": "3rd Nesting Level",
+          "dataType": "array",
+          "fieldType": "Lable",
+          "multiple":true
+        },
+        [
+          {
+            "name": "schemaList.2ndLevel.3rdLevel.name",
+            "label": "Name",
+            "dataType": "string",
+            "fieldType": "TextField",
+            "validation": {
+              "required": "required"
+            }
+          },
+          {
+            "name": "schemaList.2ndLevel.3rdLevel.type",
+            "label": "Type",
+            "dataType": "string",
+            "fieldType": "TextField",
+            "validation": {
+              "required": "required"
+            }
+          }
+        ]
+      ]
+    ]
   ]
 }
