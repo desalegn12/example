@@ -107,7 +107,7 @@ const DynamicForm = ({
    console.log('formik.errors: ', formik.errors); // Errors: The current validation errors for each field.
   // console.log('formik.touched: ', formik.touched); // Touched: Tracks which fields have been touched/visited.
   // console.log('formik.isSubmitting: ', formik.isSubmitting);  // isSubmitting: A boolean indicating if the form is currently being submitted.
-
+  let parentLabel = {item:""}
   return (
     <Card sx={{ p: 4 }}>
       <form onSubmit={formik.handleSubmit}>
@@ -116,7 +116,7 @@ const DynamicForm = ({
             if (!Array.isArray(field)) {
               const finalDataModel =
                 field.source !== undefined ? dataModel : undefined;
-
+              
               switch (field.fieldType) {
                 
                 case "TextField":
@@ -171,13 +171,8 @@ const DynamicForm = ({
                   );
 
                 case "Lable":
-                  return (
-                    <Grid item xs={12} sm={12}>
-                    <Typography component="h5" variant="h5">
-                      {field.label}
-                    </Typography>
-                    </Grid>
-                  )
+                  parentLabel.item = field.label
+                  return null
                 default:
                   return null;
               }
@@ -189,7 +184,10 @@ const DynamicForm = ({
                     color="primary"
                 >
                     <AddCircleOutlineIcon sx={{ mr: 1 }} />
-                    Add Schema Item
+                    Add {  }
+                    {
+                      parentLabel.item 
+                    }
                 </Button>
                 <IconButton
                 aria-label="delete"
