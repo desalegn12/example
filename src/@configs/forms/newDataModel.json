@@ -1,0 +1,37 @@
+{
+  "fields": [
+    {
+      "name": "id",
+      "label": "Data Model Name",
+      "dataType": "string",
+      "fieldType": "TextField",
+      "validation": {
+        "required": "Data model name is required"
+      }
+    },
+    {
+      "name": "dataSource",
+      "label": "Data Source",
+      "dataType": "string",
+      "fieldType": "TextField",
+      "validation": {
+        "required": "Data source is required"
+      }
+    },
+    {
+      "name": "tableConfig",
+      "label": "Table Config",
+      "dataType": "string",
+      "fieldType": "TextField",
+      "validation": {
+        "required": "Table config is required"
+      }
+    },
+    {
+      "name": "schemaList",
+      "label": "Schema List",
+      "dataType": "array",
+      "fieldType": "SchemaItems"
+    }
+  ]
+}

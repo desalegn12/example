@@ -1,0 +1,1 @@
+export type DocumentType = 'customers' | 'dashboards' | 'data-models';

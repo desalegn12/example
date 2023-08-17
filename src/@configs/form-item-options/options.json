@@ -1,0 +1,41 @@
+
+{
+  "typeOptions":[
+    {"name":"date","label":"date"},
+    {"name":"string","label":"string"},
+
+    {"name":"number","label":"number"}
+
+],"jobTypes":[
+  {
+    "name": "summarizedByDateAggregation",
+    "label": "summarizedByDateAggregation"
+  },
+  { "name": "dataGrid", "label": "dataGrid" },
+  { "name": "gaCategories", "label": "gaCategories" },
+  {
+    "name": "HOLISTIC_SEARCH_PPC_CONVERTERS",
+    "label": "HOLISTIC_SEARCH_PPC_CONVERTERS"
+  },
+  {
+    "name": "HOLISTIC_SEARCH_SEO_AUTO_INSIGHTS",
+    "label": "HOLISTIC_SEARCH_SEO_AUTO_INSIGHTS"
+  },
+  { "name": "countDimensionDistinctYoy", "label": "countDimensionDistinctYoy" }
+],"formatOptions":[
+  {"name":"YYYY-MM-DD","label":"YYYY-MM-DD"},
+  {"name":"YYYY-WW","label":"YYYY-WW"},
+
+  {"name":"number","label":"number"},
+  {"name":"currency","label":"currency"}
+
+],"defaultAggregation":
+[
+    {"name":"count","label":"count"},
+    {"name":"sum","label":"sum"},
+    {"name":"avg","label":"avg"}
+],"directions":[
+  {"name":"ASC","label":"ASC"},
+  {"name":"DESC","label":"DESC"}
+]
+}
